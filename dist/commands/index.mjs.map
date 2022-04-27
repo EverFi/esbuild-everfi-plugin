@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/commands/index.mts"],
+  "sourcesContent": ["/*\n * Copyright (c) 2022 Kiyozz.\n *\n * All rights reserved.\n */\n\nimport { Build } from './build.mjs'\nimport { Dev } from './dev.mjs'\n\nexport const commands = {\n  build: Build,\n  dev: Dev,\n}\n"],
+  "mappings": "AAMA;AACA;AAEO,MAAM,WAAW;AAAA,EACtB,OAAO;AAAA,EACP,KAAK;AACP;",
+  "names": []
+}

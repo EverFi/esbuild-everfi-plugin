@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/builder/base.builder.mts"],
+  "sourcesContent": ["/*\n * Copyright (c) 2022 Kiyozz.\n *\n * All rights reserved.\n */\n\nimport type { Builder } from '../builder.mjs'\nimport type { Item } from '../config/config.mjs'\n\nexport abstract class BaseBuilder<T> implements Builder {\n  readonly env: string\n\n  abstract readonly hasInitialBuild: boolean\n\n  protected constructor(protected readonly _config: Item<T>) {\n    this.env = this._config.isMain\n      ? 'Main'\n      : this._config.isRenderer\n      ? 'Renderer'\n      : 'Unknown env'\n  }\n\n  abstract build(): Promise<void>\n\n  abstract dev(start: () => void): void | Promise<void>\n}\n"],
+  "mappings": "AASO,MAAe,YAAkC;AAAA,EAK5C,YAA+B,SAAkB;AAAlB;AACvC,SAAK,MAAM,KAAK,QAAQ,SACpB,SACA,KAAK,QAAQ,aACb,aACA;AAAA,EACN;AAKF;",
+  "names": []
+}

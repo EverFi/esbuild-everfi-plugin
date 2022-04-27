@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/track.mts"],
+  "sourcesContent": ["/*\n * Copyright (c) 2022 Kiyozz.\n *\n * All rights reserved.\n */\n\nlet _startedAt: number | undefined\n\nfunction zeros(value: number, fixed: number): string {\n  const fixedValue = value.toFixed(fixed)\n\n  if (value < 10) {\n    return `00${fixedValue}`\n  }\n\n  if (value < 100) {\n    return `0${fixedValue}`\n  }\n\n  return fixedValue\n}\n\nexport function track(): string {\n  if (typeof _startedAt === 'undefined') {\n    _startedAt = Date.now()\n  }\n\n  const value = (Date.now() - _startedAt) / 1000\n\n  return `[${zeros(value, 2)}]`\n}\n"],
+  "mappings": "AAMA,IAAI;AAEJ,eAAe,OAAe,OAAuB;AACnD,QAAM,aAAa,MAAM,QAAQ,KAAK;AAEtC,MAAI,QAAQ,IAAI;AACd,WAAO,KAAK;AAAA,EACd;AAEA,MAAI,QAAQ,KAAK;AACf,WAAO,IAAI;AAAA,EACb;AAEA,SAAO;AACT;AAEO,iBAAyB;AAC9B,MAAI,OAAO,eAAe,aAAa;AACrC,iBAAa,KAAK,IAAI;AAAA,EACxB;AAEA,QAAM,QAAS,MAAK,IAAI,IAAI,cAAc;AAE1C,SAAO,IAAI,MAAM,OAAO,CAAC;AAC3B;",
+  "names": []
+}

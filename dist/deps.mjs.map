@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/deps.mts"],
+  "sourcesContent": ["/*\n * Copyright (c) 2022 Kiyozz.\n *\n * All rights reserved.\n */\n\nimport depsTree from 'dependency-tree-81'\nimport path from 'node:path'\n\nexport function getDeps(file: string): string[] {\n  return depsTree.toList({\n    filename: file,\n    directory: path.dirname(file),\n    filter: (filePath) => filePath.indexOf('node_modules') === -1,\n  })\n}\n"],
+  "mappings": "AAMA;AACA;AAEO,iBAAiB,MAAwB;AAC9C,SAAO,SAAS,OAAO;AAAA,IACrB,UAAU;AAAA,IACV,WAAW,KAAK,QAAQ,IAAI;AAAA,IAC5B,QAAQ,CAAC,aAAa,SAAS,QAAQ,cAAc,MAAM;AAAA,EAC7D,CAAC;AACH;",
+  "names": []
+}

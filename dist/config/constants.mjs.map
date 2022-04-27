@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/config/constants.mts"],
+  "sourcesContent": ["/*\n * Copyright (c) 2022 Kiyozz.\n *\n * All rights reserved.\n */\n\nexport const CONFIG_FILE_NAME = 'electron-esbuild.config.yaml'\n"],
+  "mappings": "AAMO,MAAM,mBAAmB;",
+  "names": []
+}

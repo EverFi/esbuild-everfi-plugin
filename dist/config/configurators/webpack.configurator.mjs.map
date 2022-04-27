@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/config/configurators/webpack.configurator.mts"],
+  "sourcesContent": ["/*\n * Copyright (c) 2022 Kiyozz.\n *\n * All rights reserved.\n */\n\nimport deepMerge from 'deepmerge'\nimport path from 'node:path'\nimport { Configuration } from 'webpack'\n\nimport type { EnvConfig } from '../config.mjs'\nimport { Target, TypeConfig } from '../enums.mjs'\nimport type { Configurator } from './base.configurator.mjs'\n\nexport class WebpackConfigurator implements Configurator<TypeConfig.webpack> {\n  public readonly type = TypeConfig.webpack\n\n  constructor(public readonly config: EnvConfig) {}\n\n  toBuilderConfig(\n    partial: Partial<Configuration>,\n    _: Configuration,\n    target: Target,\n  ): Configuration {\n    return deepMerge(\n      partial,\n      {\n        output: {\n          filename: target === Target.main ? 'main.js' : 'index.js',\n          path: path.resolve(process.cwd(), this.config.output),\n        },\n      },\n      { clone: false },\n    )\n  }\n}\n"],
+  "mappings": "AAMA;AACA;AAIA;AAGO,MAAM,oBAAgE;AAAA,EAG3E,YAA4B,QAAmB;AAAnB;AAFZ,gBAAO,WAAW;AAAA,EAEc;AAAA,EAEhD,gBACE,SACA,GACA,QACe;AACf,WAAO,UACL,SACA;AAAA,MACE,QAAQ;AAAA,QACN,UAAU,WAAW,OAAO,OAAO,YAAY;AAAA,QAC/C,MAAM,KAAK,QAAQ,QAAQ,IAAI,GAAG,KAAK,OAAO,MAAM;AAAA,MACtD;AAAA,IACF,GACA,EAAE,OAAO,MAAM,CACjB;AAAA,EACF;AACF;",
+  "names": []
+}

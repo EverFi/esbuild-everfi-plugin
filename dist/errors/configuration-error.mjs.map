@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/errors/configuration-error.mts"],
+  "sourcesContent": ["/*\n * Copyright (c) 2022 Kiyozz.\n *\n * All rights reserved.\n */\n\nexport class ConfigurationError extends Error {}\n"],
+  "mappings": "AAMO,MAAM,2BAA2B,MAAM;AAAC;",
+  "names": []
+}

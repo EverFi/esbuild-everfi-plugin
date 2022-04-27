@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/cli.mts"],
+  "sourcesContent": ["/*\n * Copyright (c) 2022 Kiyozz.\n *\n * All rights reserved.\n */\n\nimport { Result } from 'meow'\n\nexport type CliFlags = {\n  clean: {\n    type: 'boolean'\n    default: true\n  }\n}\n\nexport type CliResult = Result<CliFlags>\n\nexport abstract class Cli {\n  protected constructor(protected cli: CliResult) {}\n\n  abstract init(): Promise<void>\n}\n"],
+  "mappings": "AAiBO,MAAe,IAAI;AAAA,EACd,YAAsB,KAAgB;AAAhB;AAAA,EAAiB;AAGnD;",
+  "names": []
+}

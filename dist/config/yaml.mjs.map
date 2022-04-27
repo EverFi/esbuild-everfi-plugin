@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/config/yaml.mts"],
+  "sourcesContent": ["/*\n * Copyright (c) 2022 Kiyozz.\n *\n * All rights reserved.\n */\n\nimport type { EnvConfig } from './config.mjs'\nimport { TypeConfig } from './enums.mjs'\n\nexport type YamlItem = {\n  type: TypeConfig\n  path: string\n  src: string\n  output: string\n  html?: string\n}\n\nexport type YamlSkeleton = {\n  mainConfig: YamlItem\n  rendererConfig: YamlItem | null\n}\n\nexport class Yaml {\n  readonly main: EnvConfig\n  readonly renderer: EnvConfig | null\n\n  constructor({\n    main,\n    renderer,\n  }: {\n    main: EnvConfig\n    renderer: EnvConfig | null\n  }) {\n    this.main = main\n    this.renderer = renderer\n  }\n}\n"],
+  "mappings": "AAsBO,MAAM,KAAK;AAAA,EAIhB,YAAY;AAAA,IACV;AAAA,IACA;AAAA,KAIC;AACD,SAAK,OAAO;AACZ,SAAK,WAAW;AAAA,EAClB;AACF;",
+  "names": []
+}

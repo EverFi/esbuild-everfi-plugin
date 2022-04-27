@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/config/enums.mts"],
+  "sourcesContent": ["/*\n * Copyright (c) 2022 Kiyozz.\n *\n * All rights reserved.\n */\n\nexport enum TypeConfig {\n  esbuild = 'esbuild',\n  webpack = 'webpack',\n  vite = 'vite',\n}\n\nexport enum Target {\n  main,\n  renderer,\n}\n"],
+  "mappings": "AAMO,IAAK,aAAL,kBAAK,gBAAL;AACL,2BAAU;AACV,2BAAU;AACV,wBAAO;AAHG;AAAA;AAML,IAAK,SAAL,kBAAK,YAAL;AACL;AACA;AAFU;AAAA;",
+  "names": []
+}
